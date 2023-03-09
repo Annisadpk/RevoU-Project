@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarika Travel</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <nav class="container">
+            <div class="navbar">
+                <img class="logo" src="antarikalogo.png" alt="logo">
+                <div class="menu">
+                    <a class="menu-item" href="#hero">Home</a>
+                    <a class="menu-item" href="#hero-package">Our Package</a>
+                    <a class="menu-item" href="#call-us">Call Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Content-->
+    <main>
+        <!-- Ini bagian hero -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-title">
+                    <h1>Your Trusted Travel Agent's</h1>
+                    <h4>Your Happiness is Our Happiness </h4>
+                </div>
+            </div>
+        </section>
+        <!-- Ini bagian experience-->
+        <section id="about-contact">
+            <div class="container">
+                <div class="about-contact">
+                    <div class="about">
+                        <!-- gambar -->
+                        <div class="gambarwisata" id="gambarwisata">
+                            <img class="gambarwisata-img" src="bali.jpeg" alt="keindahan Bali">
+                        </div>
+
+                       
+                        <!-- Person Experience -->
+                        <div class="about-content">
+                            <div class="content-action">
+                                <p>
+                                    "Liburan saya di Gili Trawangan sungguh menakjubkan, sangat seru karna perjalanan bersama <br> Travel Antarika sangat aman, nyaman dan menyenangkan."
+                                </p>
+                            </div>
+                            <div class="content-person">
+                                <img src="annisa.png" alt="" width="50px" height="50px">
+                                <div class="person-info">
+                                    <h6>Annisa Dita Putri Kartika</h6>
+                                    <p>Melakukan perjalanan 2 minggu yang lalu</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="line" />
+                        <!-- Benefit our service -->
+                        <div class="about-information">
+                            <h5 class="information-title">
+                                Antarika Travel memberikan anda pengalaman terbaik dalam liburan.
+                                Karna kami menyediakan liburan yang sangat menyenangkan untuk menikmati keindahan Indonesia.
+                                Anda akan mendapatkan pengalaman yang tak terlupakan. Berikut beberapa benefit yang bisa kamu dapatkan:
+                            </h5>
+                            <ul class="information-list">
+                                <li>
+                                   <div class="list-number">#</div>
+                                   <div class="list-paragraf">
+                                        <p>Perlengkapan perjalanan terbaik dan sangat nyaman digunakan dalam perjalanan anda. </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-number">#</div>
+                                    <div class="list-paragraf">
+                                        <p>Paket Wisata yang menakjubkan. Membuat Pengalaman anda lebih berkesan</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div id="list-number" class="list-number">#</div>
+                                    <div class="list-paragraf">
+                                        <p>Paket Makanan Khusus teruntuk anda yang memilih paket prioritas</p>
+                                    </div>
+                                </li>
+                                 
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!-- Ini contact us-->
+                    <div class="contact">
+                        <div class="contact-card">
+                            <!--hero card-->
+                            <div class="card-title">
+                                <h4>Contact us</h4>
+                                <p>Sales akan menghubungi anda dalam kurun waktu 1x24 Jam,
+                                    Setelah anda mengisi data berikut.
+                                </p>
+                            </div>
+                            <!--Form-->
+                            <form class="costumer-form" name="costumer-form" onsubmit="return validateForm()">
+                                <div class="input">
+                                    <label for="nama">Your Name :</label>
+                                    <input type="text" placeholder="Nama lengkap anda" name="full-name">
+                                </div>
+                                <div class="input">
+                                    <label for="email">Email :</label>
+                                    <input type="text" placeholder="Address Email" name="email">
+                                </div>
+                                <div class="input">
+                                    <label for="destinasi">Choose Your Detination </label>
+                                    <select name="destination">
+                                        <option id="Select Your Destination" value="Select Your Destination">Select Your Destination</option>
+                                        <option id="bali" value="bali">Wonderful Bali</option>
+                                        <option id="lombok" value="lombok">Wonderful Lombok</option>
+                                        <option id="jogja" value="jogja">Wonderful Yogyakarta</option>
+                                        <option id="plkmd" value="plkmd">Wonderful Pulau Komodo</option>
+                                </select>
+                                </div>
+                                <input type="submit" value="SEND">
+                            </form>
+                            <!--Validation Form-->
+                            <script>
+                                function validateForm() {
+                                    /*Mengambil Nilai*/
+                                    var name = document.forms ["costumer-form"] ["full-name"].value;
+                                    var email = document.forms ["costumer-form"] ["email"].value;
+                                    var destination = document.forms ["costumer-form"] ["destination"].value;
+                                    console.log({ name, email, destination });
+                                    /*Validasi Form*/
+                                    if ( name =="" || email =="" || destination =="" || destination =="Select Your Destination") {
+                                        alert ("Input tidak boleh kosong");
+                                        return false;
+                                    }
+                                } 
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Ini Bagian Our Package -->
+        <section id="hero-package">
+            <div class="package-title">
+                <h1>Our Package</h1>
+            </div>
+        </section>
+        <!-- Ini bagian Package Card -->
+        <section id="package">
+            <div class="container">
+                <!-- Ini Package List -->
+                <div class="package-list" id="package-list">
+                    <ul class="list-package">
+                        <li>
+                            <div class="list-icon">&#x1F4A1;</div>
+                            <div class="list-paragraf">
+                                <h5>Bali</h5>
+                                <p>
+                                    Wisata kota budaya. <br> pertunjukan budaya yang menarik <br> keindahan alam yang tak tertandingi.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-package">
+                        <li>
+                            <div class="list-icon">&#x1F4A1;</div>
+                            <div class="list-paragraf">
+                                <h5>Lombok</h5>
+                                <p>
+                                    Keindahan alam yang Menakjubkan. <br> Nikamti waktu santai anda disini <br> Dan sunset adalah moment paling <br> ditunggu - tunggu.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-package">
+                        <li>
+                            <div class="list-icon">&#x1F4A1;</div>
+                            <div class="list-paragraf">
+                                <h5>Yogyakarta</h5>
+                                <p>
+                                    Wisata kota pelajar. <br> Kunjungi borodur dan prambanan. <br> Banyak destinasi pantai yang dapat <br> dipilih,malioboro adalah wisata favorit.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <main  id="call-us" >
+        <section>
+            <div class="container">
+                <!-- Ini Package Closing -->
+                <div class="package-closing">
+                    <h2>Anda Tertarik Berlibur Untuk Menikmati Keindahan Alam Indonesia?</h2>
+                    <h5>
+                        Mari segera miliki pengalaman yang tak terlupakan perjalanan <br> Menjelajahi keindahan alam Indonesia, kapan pun dan dimana pun anda menginginkannya.
+
+                    </h5>
+                    <button class="call"><a href="https://instagram.com/annisadpk_27?igshid=ZDdkNTZiNTM=">Pesan Sekarang!</a></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img class="logo" src="antarikalogo.png" alt="logo">
+
+                <p>&copy; 2023 Antarika Travel</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
